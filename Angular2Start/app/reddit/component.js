@@ -9,20 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var HelloAngularModule = (function () {
-    function HelloAngularModule() {
+var RedditAppComponent = (function () {
+    function RedditAppComponent() {
     }
-    HelloAngularModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.HelloAngular],
-            bootstrap: [app_component_1.HelloAngular]
+    RedditAppComponent = __decorate([
+        core_1.Component({
+            selector: 'reddit',
+            template: "\n\t\t<form class=\"ui large form segment\">\n\t\t\t<h3 class=\"ui header\">Add a Link</h3>\n\t\t\t<div class=\"field\">\n\t\t\t\t<label for=\"title\">Title:</label>\n\t\t\t\t<input name=\"title\">\n\t\t\t</div>\n\t\t\t<div class=\"field\">\n\t\t\t\t<label for=\"link\">Link:</label>\n\t\t\t\t<input name=\"link\">\n\t\t\t</div>\n\t\t\t<button class=\"ui positive right floated button\">otpravit</button>\n\t\t</form>\n\t"
         }), 
         __metadata('design:paramtypes', [])
-    ], HelloAngularModule);
-    return HelloAngularModule;
+    ], RedditAppComponent);
+    return RedditAppComponent;
 }());
-exports.HelloAngularModule = HelloAngularModule;
-//# sourceMappingURL=app.module.js.map
+exports.RedditAppComponent = RedditAppComponent;
+//# sourceMappingURL=component.js.map

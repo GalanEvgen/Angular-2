@@ -9,18 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var HelloAngular = (function () {
-    function HelloAngular() {
-        this.names = ['Gall', 'Galls', 'GalanEvgen'];
+var platform_browser_1 = require('@angular/platform-browser');
+var component_1 = require("./component");
+var RedditAppModule = (function () {
+    function RedditAppModule() {
     }
-    HelloAngular = __decorate([
-        core_1.Component({
-            selector: 'hello-angular',
-            template: "\n\t\t<ul>\n\t\t\t<li *ngFor=\"let name of names\">Hello {{ name }}!</li>\n\t\t</ul>\n\t"
+    RedditAppModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            declarations: [component_1.RedditAppComponent],
+            bootstrap: [component_1.RedditAppComponent],
         }), 
         __metadata('design:paramtypes', [])
-    ], HelloAngular);
-    return HelloAngular;
+    ], RedditAppModule);
+    return RedditAppModule;
 }());
-exports.HelloAngular = HelloAngular;
-//# sourceMappingURL=app.component.js.map
+exports.RedditAppModule = RedditAppModule;
+//# sourceMappingURL=module.js.map
