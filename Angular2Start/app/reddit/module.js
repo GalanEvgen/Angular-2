@@ -18,7 +18,7 @@ var RedditAppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
             declarations: [component_1.RedditAppComponent],
-            bootstrap: [component_1.RedditAppComponent],
+            bootstrap: [component_1.RedditAppComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], RedditAppModule);

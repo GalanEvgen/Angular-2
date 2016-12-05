@@ -1,0 +1,75 @@
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="top-text">
+				<a href="https://angular.io/" class="header item">
+					<img class="logo" src="resources/images/header-logo.svg">
+				</a>
+				<div class="header-text">
+					<h1>
+						{{ title }}
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="content" *ngIf="todos.length">
+	<div class="container">
+		<div class="row">
+			<div class="main-form" *ngFor="let todo of todos" [class.completed]="todo.completed">
+				<button (click)="toggle(todo)">
+					<i *ngIf="!todo.complited" class="fa fa-square-o"></i>
+					<i *ngIf="todo.complited" class="fa fa-check-square-o"></i>
+				</button>
+				<div class="main-form-text">
+					<h3>{{ todo.title }}</h3>
+				</div>
+				<button class="button-delete"(click)="delete(todo)">
+					<i class="fa fa-trash"></i>
+				</button>
+			</div>
+    </div>
+	</div>
+</section>
+
+<!--<header>
+	<div class="ui menu">
+    <div class="ui container">
+      <a href="https://angular.io/" class="header item">
+        <img class="logo" src="resources/images/header-logo.svg">
+      </a>
+      <div class="header item borderless">
+        <h1 class="ui header">
+         {{ title }}
+        </h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+	<div class="ui menu">
+    <div class="ui container">
+			<div class="ui checkbox">
+  			<input type="checkbox" name="example">
+  			<label>Make my profile visible</label>
+			</div>
+			<button class="ui right floated button">
+			<i class="fa fa-trash" aria-hidden="true"></i>
+			</button>
+
+    </div>
+  </div>
+
+<form class="ui large form segment">
+	<h3 class="ui header">Add a Link</h3>
+	<div class="field">
+		<label for="title">Title:</label>
+		<input name="title">
+	</div>
+	<div class="field">
+		<label for="link">Link:</label>
+		<input name="link">
+	</div>
+	<button class="ui positive right floated button">Send</button>
+</form>-->

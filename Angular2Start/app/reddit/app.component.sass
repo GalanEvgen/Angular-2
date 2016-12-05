@@ -1,0 +1,77 @@
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	overflow-x: hidden
+	background-color: #a9bde8
+
+header
+	position: relative
+	width: 100%
+	background-color: #2054ff
+	color: #eee
+	text-align: center
+	padding: 0
+	margin: 0
+	.top-text
+		display: inline-block
+		img
+			height: 50px
+			margin-bottom: 5px
+		.header-text
+			display: inline-block
+			margin-left: 10px
+			h1
+				margin: 10px
+button
+	padding: 10px 13px
+	background-color: rgba(255, 255, 255, 0.1)
+	color: rgb(49, 49, 49)
+	border: 1px solid rgb(49, 49, 49)
+	border-radius: 3px
+	transition: all .4s ease
+	vertical-align: middle
+	&:hover
+		color: #2054ff
+		border: 1px solid #2054ff
+
+section
+	position: relative
+	display: inline-block
+	width: 100%
+	//margin-top: 10px
+	font-size: 18px
+	.main-form
+		position: relative
+		display: inline-block
+		width: 100%
+		background-color: rgba(32, 84, 255, 0.24)
+		border: 1px solid rgba(255, 255, 255, 0.47)
+		margin-top: 5px
+		padding: 20px
+		border-radius: 3px
+		transition: all .4s ease
+		&:hover
+			.button-delete
+				opacity: 1
+		//	border: 1px solid #2054ff
+		.button-delete
+			float: right
+			opacity: 0.1
+			
+		.main-form-text
+			display: inline-block
+			vertical-align: middle
+			margin: 5px 0 0 30px
+			h3
+				color: #000000
+				margin: 0
+				

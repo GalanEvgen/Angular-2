@@ -1,20 +1,42 @@
 import { Component } from '@angular/core';
 
+const todos = [
+	{
+		title: 'Изучить JavaScript',
+		completed: true
+	},
+	{
+		title: 'Изучить Angular 2',
+		completed: false
+	},
+	{
+		title: 'Написать приложение',
+		completed: false
+	}
+];
+
 @Component({
+	moduleId: module.id,
 	selector: 'reddit',
-	template: `
-		<form class="ui large form segment">
-			<h3 class="ui header">Add a Link</h3>
-			<div class="field">
-				<label for="title">Title:</label>
-				<input name="title">
-			</div>
-			<div class="field">
-				<label for="link">Link:</label>
-				<input name="link">
-			</div>
-			<button class="ui positive right floated button">otpravit</button>
-		</form>
-	`
+	templateUrl: 'app.component.html',
+	styleUrls: ['app.component.css']
+	
 })
-export class RedditAppComponent { }
+
+export class RedditAppComponent {
+	title= 'Angular-2 first start :)',
+	todos = todos;
+
+	toggle(todo: any) {
+		[todo.completed = !todo.completed;
+		console.log('toggle', todo)]
+	}
+	
+	delete(todo: { completed: boolean }){
+		let index = this.todos.indexOf(todo);
+		
+		if (index > -1) {
+			this.todos.splice(index, 1);
+		}
+	}
+}

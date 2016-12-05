@@ -1,4 +1,5 @@
-﻿# Основы Angular 2
+# Основы Angular 2
+
 ## Установка
 ```
 npm install

@@ -9,13 +9,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var todos = [
+    {
+        title: 'Изучить JavaScript',
+        completed: true
+    },
+    {
+        title: 'Изучить Angular 2',
+        completed: false
+    },
+    {
+        title: 'Написать приложение',
+        completed: false
+    }
+];
 var RedditAppComponent = (function () {
     function RedditAppComponent() {
+        this.title = 'Angular-2 first start :)';
+        this.todos = todos;
     }
+    RedditAppComponent.prototype.toggle = function (todo) {
+        [todo.completed = !todo.completed,
+            console.log('toggle', todo)];
+    };
+    RedditAppComponent.prototype.delete = function (todo) {
+        var index = this.todos.indexOf(todo);
+        if (index > -1) {
+            this.todos.splice(index, 1);
+        }
+    };
     RedditAppComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'reddit',
-            template: "\n\t\t<form class=\"ui large form segment\">\n\t\t\t<h3 class=\"ui header\">Add a Link</h3>\n\t\t\t<div class=\"field\">\n\t\t\t\t<label for=\"title\">Title:</label>\n\t\t\t\t<input name=\"title\">\n\t\t\t</div>\n\t\t\t<div class=\"field\">\n\t\t\t\t<label for=\"link\">Link:</label>\n\t\t\t\t<input name=\"link\">\n\t\t\t</div>\n\t\t\t<button class=\"ui positive right floated button\">otpravit</button>\n\t\t</form>\n\t"
+            templateUrl: 'app.component.html',
+            styleUrls: ['app.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], RedditAppComponent);
